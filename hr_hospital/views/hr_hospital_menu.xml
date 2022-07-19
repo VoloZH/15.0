@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="hr_hospital_main_menu"
+              web_icon="hr_hospital,static/description/icon.png"
+              name="Hospital" sequence="300"/>
+
+    <menuitem id="hr_hospital_patient"
+              parent="hr_hospital_main_menu"
+              name="Patients" sequence="301"/>
+
+    <menuitem id="hr_hospital_doctor"
+              parent="hr_hospital_main_menu"
+              name="Doctors" sequence="302"/>
+
+    <menuitem id="hr_hospital_patient_card"
+              parent="hr_hospital_main_menu"
+              name="Patient Card" sequence="303"/>
+
+<!--    <menuitem id="hr_hospital_settings_main_menu"-->
+<!--              parent="hr_hospital_main_menu"-->
+<!--              groups="group_hr_hospital_manager,group_hr_hospital_admin"-->
+<!--              name="Settings" sequence="9999"/>-->
+
+
+
+</odoo>

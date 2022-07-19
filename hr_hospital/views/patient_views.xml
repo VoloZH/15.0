@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="hr_hospital_patient_tree" model="ir.ui.view">
+            <field name="name">hr.hospital.patient.tree ()</field>
+            <field name="model">hr.hospital.patient</field>
+            <field name="arch" type ="xml">
+                    <tree>
+                        <field name="first_name"/>
+                        <field name="second_name"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="hr_hospital_patient_form" model="ir.ui.view">
+            <field name="name">hr.hospital.patient.form ()</field>
+            <field name="model">hr.hospital.patient</field>
+            <field name="arch" type ="xml">
+                    <form>
+                        <header></header>
+                        <sheet>
+                            <group>
+                                <field name="first_name"/>
+                                <field name="second_name"/>
+                            </group>
+                        </sheet>
+
+                    </form>
+            </field>
+        </record>
+
+        <record id="hr_hospital_patient_act_window" model="ir.actions.act_window">
+            <field name="name">hr.hospital.patient</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.hospital.patient</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="hr_hospital_patient_tree"/>
+        </record>
+
+        <menuitem id="hr_hospital_patient_menu"
+                  action="hr_hospital_patient_act_window"
+                  parent="hr_hospital_patient"
+                  name="Patient" sequence="200"/>
+
+</odoo>

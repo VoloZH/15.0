@@ -1,0 +1,20 @@
+{
+    'name': 'hospital',
+    'version': '15.0.1.0.0.',
+    'summary': '',
+    'category': 'Customization',
+    'author': '',
+    'website': '',
+    'license': 'OPL-1',
+    'depends': [],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/hr_hospital_menu.xml',
+        'views/patient_card_views.xml',
+        'views/doctor_views.xml',
+        'views/patient_views.xml',
+    ],
+    'demo': [],
+    'installable': True,
+    'auto_install': False,
+}
