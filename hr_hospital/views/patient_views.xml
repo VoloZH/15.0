@@ -8,6 +8,15 @@
                     <tree>
                         <field name="first_name"/>
                         <field name="second_name"/>
+                        <field name="gender"/>
+                        <field name="email"/>
+                        <field name="phone_number"/>
+                        <field name="photo"/>
+                        <field name="birthday"/>
+                        <field name="age"/>
+                        <field name="passport"/>
+                        <field name="contact_person_id"/>
+                        <field name="personal_doctor_id"/>
                     </tree>
             </field>
         </record>
@@ -22,6 +31,15 @@
                             <group>
                                 <field name="first_name"/>
                                 <field name="second_name"/>
+                                <field name="gender"/>
+                                <field name="email"/>
+                                <field name="phone_number"/>
+                                <field name="photo"/>
+                                <field name="birthday"/>
+                                <field name="age"/>
+                                <field name="passport"/>
+                                <field name="contact_person_id"/>
+                                <field name="personal_doctor_id"/>
                             </group>
                         </sheet>
 

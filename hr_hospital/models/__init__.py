@@ -1,1 +1,1 @@
-from . import patient, patient_card, doctor, diagnosis
+from . import person_mixin, patient, doctor, contact_person, diagnosis, history_of_personal_doctor, research, research_type, sample, sample_type, sick, sick_type, visit_to_doctor

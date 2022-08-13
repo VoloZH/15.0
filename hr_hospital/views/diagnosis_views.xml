@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="hr_hospital_diagnosis_tree" model="ir.ui.view">
+            <field name="name">hr.hospital.diagnosis.tree ()</field>
+            <field name="model">hr.hospital.diagnosis</field>
+            <field name="arch" type ="xml">
+                    <tree>
+                        <field name="doctor_id"/>
+                        <field name="patient_id"/>
+                        <field name="sick_id"/>
+                        <field name="sick_type"/>
+                        <field name="prescribed_treatment"/>
+                        <field name="date_of_diagnosis"/>
+                        <field name="research_id"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="hr_hospital_diagnosis_form" model="ir.ui.view">
+            <field name="name">hr.hospital.diagnosis.form ()</field>
+            <field name="model">hr.hospital.diagnosis</field>
+            <field name="arch" type ="xml">
+                    <form>
+                        <header></header>
+                        <sheet>
+                            <group>
+                                <field name="doctor_id"/>
+                                <field name="patient_id"/>
+                                <field name="sick_id"/>
+                                <field name="sick_type"/>
+                                <field name="prescribed_treatment"/>
+                                <field name="date_of_diagnosis"/>
+                                <field name="research_id"/>
+                            </group>
+                        </sheet>
+                    </form>
+            </field>
+        </record>
+
+        <record id="hr_hospital_diagnosis_act_window" model="ir.actions.act_window">
+            <field name="name">hr.hospital.diagnosis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.hospital.diagnosis</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="hr_hospital_diagnosis_tree"/>
+        </record>
+
+        <menuitem id="hr_hospital_diagnosis_menu"
+                  action="hr_hospital_diagnosis_act_window"
+                  parent="hr_hospital_diagnosis"
+                  name="Diagnosis" sequence="200"/>
+
+</odoo>
