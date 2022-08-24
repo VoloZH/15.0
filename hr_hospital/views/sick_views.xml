@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="hr_hospital_sick_tree" model="ir.ui.view">
+            <field name="name">hr.hospital.sick.tree ()</field>
+            <field name="model">hr.hospital.sick</field>
+            <field name="arch" type ="xml">
+                    <tree>
+                        <field name="sick_type_id"/>
+                        <field name="parent_id"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="hr_hospital_sick_form" model="ir.ui.view">
+            <field name="name">hr.hospital.sick.form ()</field>
+            <field name="model">hr.hospital.sick</field>
+            <field name="arch" type ="xml">
+                    <form>
+                        <header></header>
+                        <sheet>
+                            <group>
+                                <field name="sick_type_id"/>
+                                <field name="parent_id"/>
+                            </group>
+                        </sheet>
+                    </form>
+            </field>
+        </record>
+
+        <record id="hr_hospital_sick_search" model="ir.ui.view">
+            <field name="name">hr.hospital.sick.search</field>
+            <field name="model">hr.hospital.sick</field>
+            <field name="arch" type="xml">
+                <search>
+                    <searchpanel view_types="tree,pivot">
+                        <field name="sick_type_id" hierarchize="1" enable_counters="1"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="hr_hospital_sick_act_window" model="ir.actions.act_window">
+            <field name="name">hr.hospital.sick</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.hospital.sick</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="hr_hospital_sick_tree"/>
+        </record>
+
+        <menuitem id="hr_hospital_sick_menu"
+                  action="hr_hospital_sick_act_window"
+                  parent="hr_hospital_sick"
+                  name="Sick" sequence="200"/>
+
+</odoo>

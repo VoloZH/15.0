@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+
+<!--     <record id="action_window_doctor_multi_wizard" model="ir.actions.act_window">
+        <field name="name">hr.hospital.doctor.multi.wizard</field>
+        <field name="res_model">hr.hospital.doctor.multi.wizard</field>
+        <field name="view_mode">tree,form</field>
+    </record>-->
+
+
     <menuitem id="hr_hospital_main_menu"
               web_icon="hr_hospital,static/description/icon.png"
               name="Hospital" sequence="300"/>
@@ -13,9 +21,31 @@
               parent="hr_hospital_main_menu"
               name="Doctors" sequence="302"/>
 
-    <menuitem id="hr_hospital_patient_card"
+    <menuitem id="hr_hospital_contact_person"
               parent="hr_hospital_main_menu"
-              name="Patient Card" sequence="303"/>
+              name="Contact Person" sequence="303"/>
+
+
+    <menuitem id="hr_hospital_visit_to_doctor"
+              parent="hr_hospital_main_menu"
+              name="Visit to doctor" sequence="305"/>
+
+    <menuitem id="hr_hospital_history_of_personal_doctor"
+              parent="hr_hospital_main_menu"
+              name="History of personal doctor" sequence="306"/>
+
+    <menuitem id="hr_hospital_diagnosis"
+              parent="hr_hospital_main_menu"
+              name="Diagnosis" sequence="307"/>
+
+    <menuitem id="hr_hospital_research"
+          parent="hr_hospital_main_menu"
+          name="Research" sequence="308"/>
+
+    <menuitem id="hr_hospital_sick"
+          parent="hr_hospital_main_menu"
+          name="Sick" sequence="309"/>
+
 
 <!--    <menuitem id="hr_hospital_settings_main_menu"-->
 <!--              parent="hr_hospital_main_menu"-->
