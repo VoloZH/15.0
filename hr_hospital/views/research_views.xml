@@ -44,11 +44,38 @@
             </field>
         </record>
 
+        <record id="hr_hospital_research_search" model="ir.ui.view">
+            <field name="name">hr.hospital.research.search</field>
+            <field name="model">hr.hospital.research</field>
+            <field name="arch" type ="xml">
+                    <search>
+                        <field name="name"/>
+                        <field name="doctor_name"/>
+                        <field name="doctor_phone"/>
+                        <filter name="research_type_id"/>
+                        <field name="sample_id"/>
+                        <filter name="sample_type_id" string="sample_type" context="{'group_by' : 'sample_type_id'}"/>
+                    </search>
+            </field>
+        </record>
+
+        <record id="hr_hospital_research_pivot" model="ir.ui.view">
+            <field name="name">hr.hospital.research.pivot</field>
+            <field name="model">hr.hospital.research</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="doctor_id" type="row"/>
+                    <field name="research_type_id" type="row"/>
+                    <field name="date_research" interval="month" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
         <record id="hr_hospital_research_act_window" model="ir.actions.act_window">
             <field name="name">hr.hospital.research</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.hospital.research</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,pivot</field>
             <field name="view_id" ref="hr_hospital_research_tree"/>
         </record>
 
